@@ -47,17 +47,16 @@ Multimodal Feature Extraction    RAG Retrieval
 
 All experiments use GOOG stock data. The training set covers 2010–2022; the test set covers 2022–2024.
 
-| Method | Sharpe Ratio | Max Drawdown |
-|---|---|---|
-| Buy & Hold | 0.37 | — |
-| MACD | -0.12 | — |
-| DQN | 0.29 | — |
-| PPO | — | — (failed to open positions) |
-| LSTM | 0.69 | — |
-| Decision Transformer (standard) | 0.86 | -26.78% |
-| DT + FinBERT Sentiment | 0.87 | -14.99% |
-| **RAG-DT (ours)** | **0.85** | **-14.99%** |
-
+| Method | Annualized Return | Sharpe Ratio | Max Drawdown |
+|---|---|---|---|
+| Buy & Hold | 10.28% | 0.37 | -43.60% |
+| MACD | -2.31% | -0.12 | -41.71% |
+| DQN | 7.31% | 0.29 | -39.14% |
+| PPO | — | — | — (failed to open positions) |
+| LSTM | 18.08% | 0.69 | -23.17% |
+| Decision Transformer (standard) | 22.37% | 0.86 | -26.78% |
+| DT + FinBERT Sentiment | 18.17% | 0.87 | -14.99% |
+| **RAG-DT (ours)** | **17.63%** | **0.85** | **-14.99%** |
 > The RAG module contributes primarily to **drawdown control** rather than absolute return. The comparable Sharpe ratio with reduced drawdown demonstrates the value of retrieval-augmented context in risk management.
 
 ---
